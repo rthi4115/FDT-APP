@@ -7,6 +7,13 @@
   packages = [
     pkgs.jdk21
     pkgs.unzip
+    (pkgs.python3.withPackages (ps: [
+      ps.flask
+      ps.flask-cors
+      ps.scikit-learn
+      ps.numpy
+      ps.pip
+    ]))
   ];
   # Sets environment variables in the workspace
   env = {};
